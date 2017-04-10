@@ -1,7 +1,7 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
-
-
+import re
+import math
 def donuts(count):
     """
     Given an int count of a number of donuts, return a string of the
@@ -18,8 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count >= 10:
+        return 'Number of donuts: many'
+    else:
+        return 'Number of donuts: {}'.format(count)
     raise NotImplementedError
-
 
 def both_ends(s):
     """
@@ -37,8 +40,11 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if len(s)<2:
+        return ""
+    else:
+        return s[:2]+s[len(s)-2:]
     raise NotImplementedError
-
 
 def fix_start(s):
     """
@@ -56,8 +62,10 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    first = s[0]
+    t = s.replace(first, '*')
+    return t.replace('*', first, 1)
     raise NotImplementedError
-
 
 def mix_up(a, b):
     """
@@ -74,8 +82,8 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    return b[:2]+a[2:]+' '+a[:2]+b[2:]
     raise NotImplementedError
-
 
 def verbing(s):
     """
@@ -91,8 +99,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    if len(s)<3:
+        return s
+    elif s[len(s)-3:] == 'ing':
+        return s+'ly'
+    else:
+        return s+'ing'
     raise NotImplementedError
-
 
 def not_bad(s):
     """
@@ -111,8 +124,9 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    return re.sub(r'(?s)(not)(.*?)(bad)', r"good", s)
 
+    raise NotImplementedError
 
 def front_back(a, b):
     """
@@ -130,4 +144,5 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+    return a[:math.ceil(len(a)/2)]+b[:math.ceil(len(b)/2)]+a[math.ceil(len(a)/2):]+b[math.ceil(len(b)/2):]
     raise NotImplementedError

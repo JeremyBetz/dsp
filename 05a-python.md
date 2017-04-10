@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and tuples can both contain a series of values, but only lists are mutable. Since lists aren’t hasbable, only tuples are used as dictionary keys.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Sets are unordered and contain only unique items. A set might contain all of the unique customers of a business while a list might contain the purchase history. Lists are slower because the values are indexed.
 
 ---
 
@@ -28,7 +28,7 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lambda is a keyword used to create anonymous functions. Lambda can be used in the ‘key’ argument of sort complex objects by specific indices such as sorting a tuple of student records by student age.
 
 ---
 
@@ -36,7 +36,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions allow concise creation of lists by incorporating functions and conditional statements into the creation of the list.
 
 ---
 
@@ -51,7 +51,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +59,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +67,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
